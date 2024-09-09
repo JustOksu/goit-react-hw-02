@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Feedback from "./components/Feedback/Feedback";
 import Options from "./components/Options/Options";
-import styles from "./App.module.css";
 
 const App = () => {
   const [feedback, setFeedback] = useState({
@@ -11,7 +10,7 @@ const App = () => {
   });
 
   return (
-    <div className={styles.container}>
+    <div>
       <h1>Sip Happens Café</h1>
       <p>
         Please leave your feedback about our service by selecting one of the
