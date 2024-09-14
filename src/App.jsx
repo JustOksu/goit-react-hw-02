@@ -9,10 +9,12 @@ const App = () => {
     bad: 0,
   });
 
+  const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+
   return (
     <div>
       <Feedback feedback={feedback} />
-      <Options feedback={feedback} setFeedback={setFeedback} />
+      <Options setFeedback={setFeedback} totalFeedback={totalFeedback} />
     </div>
   );
 };
