@@ -11,7 +11,7 @@ const App = () => {
       : { good: 0, neutral: 0, bad: 0 };
   });
 
-  const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+  const totalFeedback = feedback.good + feedback.bad;
   const positiveFeedbackPercentage = totalFeedback
     ? Math.round((feedback.good / totalFeedback) * 100)
     : 0;
@@ -28,7 +28,7 @@ const App = () => {
     <div>
       <h1>Sip Happens Café</h1>
       <Options setFeedback={setFeedback} />
-      {totalFeedback > 0 ? (
+      {feedback.good + feedback.neutral + feedback.bad > 0 ? (
         <>
           <Feedback
             feedback={feedback}
