@@ -1,20 +1,11 @@
-const Options = ({ setFeedback }) => {
-  const handleFeedback = (type) => {
-    setFeedback((prevFeedback) => ({
-      ...prevFeedback,
-      [type]: prevFeedback[type] + 1,
-    }));
-  };
-
+const Options = ({ onLeaveFeedback, totalFeedback, resetFeedback }) => {
   return (
     <div>
-      <p>
-        Please leave your feedback about our service by selecting one of the
-        options below.
-      </p>
-      <button onClick={() => handleFeedback("good")}>Good</button>
-      <button onClick={() => handleFeedback("neutral")}>Neutral</button>
-      <button onClick={() => handleFeedback("bad")}>Bad</button>
+      <button onClick={() => onLeaveFeedback("good")}>Good</button>
+      <button onClick={() => onLeaveFeedback("neutral")}>Neutral</button>
+      <button onClick={() => onLeaveFeedback("bad")}>Bad</button>
+      {}
+      {totalFeedback > 0 && <button onClick={resetFeedback}>Reset</button>}
     </div>
   );
 };
