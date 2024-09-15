@@ -1,6 +1,5 @@
-import styles from "./Options.module.css";
-
-const Options = ({ setFeedback, totalFeedback }) => {
+// Options.jsx
+const Options = ({ setFeedback }) => {
   const handleFeedback = (type) => {
     setFeedback((prevFeedback) => ({
       ...prevFeedback,
@@ -9,20 +8,14 @@ const Options = ({ setFeedback, totalFeedback }) => {
   };
 
   return (
-    <div className={styles.options}>
-      <h2>Leave your feedback</h2>
+    <div>
+      <p>
+        Please leave your feedback about our service by selecting one of the
+        options below.
+      </p>
       <button onClick={() => handleFeedback("good")}>Good</button>
       <button onClick={() => handleFeedback("neutral")}>Neutral</button>
       <button onClick={() => handleFeedback("bad")}>Bad</button>
-
-      {totalFeedback > 0 && (
-        <button
-          onClick={() => setFeedback({ good: 0, neutral: 0, bad: 0 })}
-          className={styles.resetButton}
-        >
-          Reset
-        </button>
-      )}
     </div>
   );
 };
