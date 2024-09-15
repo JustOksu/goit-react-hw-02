@@ -1,4 +1,3 @@
-// App.jsx
 import { useState, useEffect } from "react";
 import Feedback from "./components/Feedback/Feedback";
 import Options from "./components/Options/Options";

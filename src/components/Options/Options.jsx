@@ -1,4 +1,3 @@
-// Options.jsx
 const Options = ({ setFeedback }) => {
   const handleFeedback = (type) => {
     setFeedback((prevFeedback) => ({
